@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lloyd Asis – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="#" class="logo"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <button class="theme-toggle" aria-pressed="false" aria-label="Toggle color theme">🌙</button>
+      <ul id="primary-navigation" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>John Lloyd Asis</h1>
+        <p class="lead">IT Specialist &amp; Web Developer — I build clean, accessible, and performant web experiences.</p>
+        <p class="hero-actions">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </p>
+      </div>
+      <div class="hero-avatar" aria-hidden="false">
+        <div class="avatar-shape">
+          <!-- Replace the src with your own profile image (recommended size ~320x320) -->
+          <img src="img.jpg" alt="John Lloyd Asis" class="avatar-img">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am an IT Specialist and web developer who enjoys turning complex problems into simple,
+        elegant solutions. I focus on delivering accessible, fast, and maintainable experiences
+        on the web — from pixel-perfect frontends to robust backends. My day-to-day work typically
+        includes building responsive UI, writing concise JavaScript, and designing APIs that are
+        easy to integrate and scale.
+      </p>
+      <p>
+        I believe in collaboration, continuous learning, and pragmatic choices: choosing the right
+        tool for the job, keeping interfaces intuitive, and automating repetitive tasks. I care
+        about performance and accessibility — making sure pages load quickly and work for as many
+        people as possible. Outside of coding, I enjoy researching new frameworks and refining
+        deployment workflows to ship features reliably.
+      </p>
+      <p><strong>Core strengths:</strong></p>
+      <ul>
+        <li>Frontend: semantic HTML, modern CSS, progressive enhancement, and component-driven UIs.</li>
+        <li>JavaScript &amp; Frameworks: vanilla JS, React.js, and interactive client-side experiences.</li>
+        <li>Backend &amp; Databases: Node.js, PHP, MySQL, and building small RESTful services.</li>
+        <li>Developer practices: version control (git), testing, and basic CI/CD automation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Experience <small style="color:var(--muted);font-size:.9rem;display:block;margin-top:6px"></small></h2>
+      <div class="experience-list">
+        <article class="exp-item">
+          <h3>Web Developer</h3>
+          <p class="exp-meta">Jan 2023 — Present • Remote</p>
+          <ul>
+            <li>Led a small team to redesign the company product site, improving performance and accessibility.</li>
+            <li>Built reusable React components and implemented a lightweight Node.js API for integrations.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <h3>IT Specialist</h3>
+          <p class="exp-meta">Aug 2020 — Dec 2022 • On-site</p>
+          <ul>
+            <li>Maintained internal services, MySQL databases, and automation scripts.</li>
+            <li>Developed small PHP and C# utilities to streamline reporting workflows.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:18px">Technologies I work with across frontend and backend.</p>
+      <div class="tech-grid">
+        <div class="tech-col">
+          <h3>Frontend</h3>
+          <ul class="tech-list">
+            <li class="tech-item">HTML</li>
+            <li class="tech-item">CSS</li>
+            <li class="tech-item">JavaScript</li>
+            <li class="tech-item">React.js</li>
+            <li class="tech-item">PHP</li>
+          </ul>
+        </div>
+        <div class="tech-col">
+          <h3>Backend</h3>
+          <ul class="tech-list">
+            <li class="tech-item">Node.js</li>
+            <li class="tech-item">MySQL</li>
+            <li class="tech-item">C#</li>
+            <li class="tech-item">PHP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Event Evaluation System</h3>
+          <p>
+            A full-featured event evaluation platform designed to collect attendee feedback and
+            provide organizers with actionable insights. The system supports creating events,
+            publishing customizable evaluation forms, collecting responses in real-time, and
+            generating summary reports and charts for organizers.
+          </p>
+          <ul>
+            <li>Features: event management, dynamic forms, analytics dashboard, CSV export.</li>
+            <li>Approach: focused on usability — simple forms, clear results, and performant queries.</li>
+            <li>Tech: Node.js backend, MySQL for storage, React-based admin UI (or server-rendered pages when simpler), and optional PHP integrations.</li>
+          </ul>
+          <p class="project-actions"><a class="btn" href="#contact">Request Demo</a></p>
+        </div>
+        <div class="project-card">
+          <h3>Photo Booth Web App</h3>
+          <p>
+            A playful client-side photo booth that uses the device camera and HTML5 canvas to
+            capture images, apply filters and overlays, and allow users to download or share
+            results. The app is light-weight and works entirely in the browser for quick snaps.
+          </p>
+          <ul>
+            <li>Features: camera capture, real-time filters, stickers/overlays, download/share.</li>
+            <li>Approach: prioritize responsiveness and low-latency image processing using canvas.
+            Optional backend storage endpoint implemented with Node.js or PHP for longer-term saves.</li>
+            <li>Tech: HTML5, CSS, vanilla JS (canvas + Web APIs); optional Node.js/PHP for uploads.</li>
+          </ul>
+          <p class="project-actions"><a class="btn btn-ghost" href="#projects">See Details</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      
+      <div class="contact-social" style="margin-top:14px">
+        <p style="color:var(--muted);margin-bottom:8px"></p>
+        <ul class="social-links">
+          <li><a href="https://github.com/itsmelloid" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/loidiisan" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="johnlloydasis08@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 2026 John Lloyd Asis  All right reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      if(!btn || !nav) return;
+      btn.addEventListener('click', ()=>{
+        const showing = nav.classList.toggle('show');
+        btn.setAttribute('aria-expanded', showing ? 'true' : 'false');
+      });
+    })();
+
+    // Theme toggle (dark / light) with persistence
+    (function(){
+      const toggle = document.querySelector('.theme-toggle');
+      if(!toggle) return;
+      const root = document.documentElement;
+      const body = document.body;
+
+      function setLight(isLight){
+        if(isLight){
+          body.classList.add('light');
+          toggle.textContent = '☀️';
+          toggle.setAttribute('aria-pressed','true');
+        } else {
+          body.classList.remove('light');
+          toggle.textContent = '🌙';
+          toggle.setAttribute('aria-pressed','false');
+        }
+      }
+
+      // initialize: check localStorage, then prefers-color-scheme
+      const saved = localStorage.getItem('theme');
+      if(saved === 'light') setLight(true);
+      else if(saved === 'dark') setLight(false);
+      else {
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        setLight(prefersLight);
+      }
+
+      toggle.addEventListener('click', ()=>{
+        const isLight = body.classList.toggle('light');
+        setLight(isLight);
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      });
+    })();
+  </script>
+
+</body>
+</html>
