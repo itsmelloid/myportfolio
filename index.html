@@ -36,6 +36,11 @@
         <div class="avatar-shape">
           <!-- Replace the src with your own profile image (recommended size ~320x320) -->
           <img src="img.jpg" alt="John Lloyd Asis" class="avatar-img">
+
+
+
+  
+
         </div>
       </div>
     </div>
@@ -251,6 +256,27 @@
         const isLight = body.classList.toggle('light');
         setLight(isLight);
         localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      });
+    })();
+
+    // Appointment form handler: build mailto link and open user's mail client
+    (function(){
+      const form = document.getElementById('appointment-form');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('apt-name').value.trim();
+        const email = document.getElementById('apt-email').value.trim();
+        const date = document.getElementById('apt-date').value;
+        const time = document.getElementById('apt-time').value;
+        const msg = document.getElementById('apt-msg').value.trim();
+        const subject = encodeURIComponent('Appointment request from ' + name);
+        let body = 'Name: ' + name + '\nEmail: ' + email + '\nDate: ' + date + '\nTime: ' + time + '\n\nMessage:\n' + msg;
+        body = encodeURIComponent(body);
+        // Use the site owner's email as recipient
+        const recipient = 'johnlloydasis08@gmail.com';
+        const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+        window.location.href = mailto;
       });
     })();
   </script>
